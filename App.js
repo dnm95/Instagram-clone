@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Routes } from './components/NoAuth/routes';
+import { NotAuthenticated } from './components/NoAuth/routes';
+import { AuthenticatedRoutes } from './components/Auth/routes';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,7 +14,8 @@ class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Routes />
+        <AuthenticatedRoutes />
+        {/* <NotAuthenticated /> */}
       </View>
     );
   }

@@ -5,7 +5,7 @@ import { createStackNavigator } from 'react-navigation';
 const SignIn = (props) => {
   const { navigation } = props;
   return (
-    <View>
+    <View style={{ flex: 1, justifyContent: 'center' }}>
       <Text>Componente Sign In</Text>
       <Button
         title="Navegar a SignUp"
@@ -17,7 +17,7 @@ const SignIn = (props) => {
 const SignUp = (props) => {
   const { navigation } = props;
   return (
-    <View>
+    <View style={{ flex: 1, justifyContent: 'center' }}>
       <Text>Componente Sign Up</Text>
       <Button
         title="Regresar"
@@ -27,13 +27,17 @@ const SignUp = (props) => {
   )
 }
 
-const Routes = createStackNavigator({
+const NotAuthenticated = createStackNavigator({
   SignIn: {
     screen: SignIn,
   },
   SignUp: {
     screen: SignUp,
   }
-});
+},
+  {
+    headerMode: 'none',
+  }
+);
 
-export { Routes };
+export { NotAuthenticated };
