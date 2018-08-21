@@ -10,14 +10,14 @@ const styles = StyleSheet.create({
   },
 });
 
-class Home extends Component {
+class Comments extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> Home </Text>
+        <Text> Comments </Text>
       </View>
     )
   }
 }
 
-export default Home;
+export default Comments;
