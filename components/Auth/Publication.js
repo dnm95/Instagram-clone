@@ -17,6 +17,10 @@ class Publication extends Component {
       <View style={styles.container}>
         <Text> Publication </Text>
         <Button
+          title="Autor"
+          onPress={() => { navigation.navigate('Author') }}
+        />
+        <Button
           title="Comentarios"
           onPress={() => { navigation.navigate('Comments') }}
         />
